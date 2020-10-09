@@ -1,0 +1,17 @@
+
+.fon {
+  background: rgb(255,140,0);
+  background: linear-gradient(0deg, rgba(255,140,0,1) 0%, rgba(217,201,96,1) 50%, rgba(240,248,255,1) 71%);
+  height: 60em;
+}
+
+.container {
+  margin-top: 5em;
+}
+
+.welcome {
+  text-align: center;
+  a {
+    margin: 3em;
+  }
+}
