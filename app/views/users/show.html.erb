@@ -1,2 +1,15 @@
-<%= link_to "Log Out", destroy_user_session_path, method: "delete", class: "btn btn-warning font-weight-bold float-right" %>
-<h5 class="font-weight-bold"><%= @user.email %></h5>
+<div class="title">
+  <%= link_to "Log Out", destroy_user_session_path, method: "delete", class: "btn btn-warning btn-sm font-weight-bold float-right" %>
+  <h5 class="font-weight-bold"><%= @user.email %></h5>
+</div>
+
+<% if @user.projects.any? %>
+<div>
+  <%= render @projects %>
+</div>
+<% end %>
+
+<br>
+<div class="text-center">
+  <%= link_to "Add TODO list", new_user_project_path(user_id: current_user.id), class: "btn btn-primary font-weight-bold" %>
+</div>
